@@ -1,0 +1,10 @@
+my max int = 2147483647
+Max int from int.Maxvalue is 2147483647
+my min int = -2147483648
+Min int from int.Minvalue is -2147483648
+My value of epsilon from double is 2.22044604925031E-16
+This is app. 2.22044604925031E-16
+My value of epsilon from float is 1.192093E-07
+This is app. 1.19209289550781E-07
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
