@@ -1,15 +1,14 @@
-
 all: Out.txt
-	cat Out.txt
+	cat $<
 
 Out.txt: main.exe
-	$(RUN) main.exe > Out.txt
+	mono $< > $@
 
 main.exe: main.cs vec.dll
-	$(CSC) -target:exe -out:main.exe -reference:vec.dll main.cs
+	mcs -target:exe -out:$@ $< -reference:vec.dll main.cs
 
-vec.dll:vec.cs
-	$(CSC) -target:library -out:vec.dll vec.cs
+vec.dll: vec.cs
+	mcs -target:library -out:vec.dll vec.cs
 
 clean:
-	$(RM) *.exe *.dll [Oo]ut*.txt
+	rm -f Out.txt main.exe
