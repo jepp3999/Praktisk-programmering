@@ -1,0 +1,6 @@
+Two threads: harm sum for N=1E+08
+harm: summing from 1 to 5E+07
+harm: summing from 5E+07 to 1E+08
+harm: summing from 1 to 5E+07 gives 18.3047492182933
+harm: summing from 5E+07 to 1E+08 gives 0.693147195559714
+Two threads: harm sum from 1 to 1E+08 = 18.997896413853
