@@ -4,8 +4,8 @@ set output "erf.pyxplot.png" ;\
 set xlabel "$x$" ;\
 set ylabel "$y$" ;\
 set tics out ;\
-set title "error function" ;\
+set title "Error function" ;\
 set key left top ;\
-plot [-2:2] [-1:1] "erf.data.txt" index 0 using 1:2 with lines title "erf($x$)",\
-"erf.tab.txt" using 1:2 with points pointtype 2 title "tabulated data" \
+plot [-2:2] [-1:1] "erf.data.txt" index 0 using 1:2 with lines title "Error function",\
+"erf.tab.txt" using 1:2 with points pointtype 2 title "Tabulated data" \
 
