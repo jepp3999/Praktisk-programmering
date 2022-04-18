@@ -1,11 +1,11 @@
 \
 set terminal png ;\
-set output "erf.pyxplot.png" ;\
+set output "gam.pyxplot.png" ;\
 set xlabel "$x$" ;\
 set ylabel "$y$" ;\
 set tics out ;\
-set title "error function" ;\
+set title "Gamma function (app.)" ;\
 set key left top ;\
-plot [-2:2] [-1:1] "erf.data.txt" index 0 using 1:2 with lines title "erf($x$)",\
-"erf.tab.txt" using 1:2 with points pointtype 2 title "tabulated data" \
+plot [0:6] [0:125] "gam.data.txt" index 0 using 1:2 with lines title "Gamma function",\
+"gam.tab.txt" using 1:2 with points pointtype 2 title "Tabulated data" \
 
