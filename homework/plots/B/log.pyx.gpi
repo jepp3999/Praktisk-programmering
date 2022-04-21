@@ -4,8 +4,11 @@ set output "gam.pyxplot.png" ;\
 set xlabel "$x$" ;\
 set ylabel "$y$" ;\
 set tics out ;\
-set title "Gamma function (app.)" ;\
-set key left top ;\
-plot [0:6] [0:125] "gam.data.txt" index 0 using 1:2 with lines title "Gamma function",\
-"gam.tab.txt" using 1:2 with points pointtype 2 title "Tabulated data" \
+set title "Gamma and LnGamma function (app.)" ;\
+set key right bottom ;\
+plot [-5:5] [-5:5] "gam.data.txt" index 0 using 1:2 with lines title "Gamma(x)",\ 
+\
+"gam.data.txt" every ::50::100  using 1:3 with lines title "lnGamma(x)",\
+"gam.tab.txt" using 1:2 with points pointtype 2 title "Tabulated Gamma", \
+"gam.tab.txt" using 1:3 with points pointtype 3 title "Tabulated lnGamma"\
 
