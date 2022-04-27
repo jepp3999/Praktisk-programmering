@@ -1,0 +1,12 @@
+\
+set terminal png ;\
+set output "complex.pyxplot.png" ;\
+set xlabel "$Re(z)$" ;\
+set ylabel "$Im(z)$" ;\
+set zlabel "$abs(\Gamma(z))$" ;\
+set title "Gamma function" ;\
+set ticks out ;\
+set key below ;\
+plot 3d [-5: 5] [-5: 5] [0: 6] "gam.data.txt" index 0 using 1:2:3 with surface col black fillcol blue title "Complex Gamma function" 
+\
+
