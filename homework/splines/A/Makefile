@@ -6,10 +6,11 @@ linspline.png: Out.txt Makefile
 	set ylabel "$$y$$"\n\
 	set tics out\n\
 	set grid\n\
-	plot [-0.5:20.5] [-1.5:1.5] "Out.txt" index 0 using 1:2 with points title"Tabulated sin(x)",\ \n\
-	"Out.txt" index 0 using 1:3 with points pointtype 1 title "Tabulated -cos(x)",\ \n\
-	"Out.txt" index 1 using 1:2 with lines title "Linear interpolation",\ \n\
-	"Out.txt" index 1 using 1:3 with lines title "Integral: -cos(x)"\n\
+	set key bottom left \n\
+	plot [-2:10.5] "Out.txt" index 0 using 1:2 with points title"Tab. sin(x)",\ \n\
+	"Out.txt" index 0 using 1:3 with points pointtype 1 title "Tab. -cos(x)",\ \n\
+	"Out.txt" index 1 using 1:2 with lines title "LinIntPol: sin(x)",\ \n\
+	"Out.txt" index 1 using 1:3 with lines title "LinInteg: -cos(x)"\n\
 	'| tee log | pyxplot
 
 
@@ -21,3 +22,6 @@ main.exe: main.cs linspline.dll
 
 linspline.dll: linspline.cs
 	mcs $< -target:library -out:$@
+clean:
+	rm -r data.txt *.dll *.exe *.png
+
