@@ -7,7 +7,7 @@ using static System.Math;
 class main{
 	public static void Main(){
 		double a=0,b=10;
-		int N=10;
+		int N=30;
 		double step = (b-a)/(N-1);
 		double[] xtable = new double[N];
 		double[] ytable = new double[N];
@@ -22,7 +22,7 @@ class main{
 		for(double z=0.0; z<xtable[xtable.Length-1]; z+=step/64){
 			double linterp = linspline.linterp(xtable,ytable,z);
 			double linterpInteg = linspline.linterpInteg(xtable,ytable,z);
-			Write($"{z} {linterp} {linterpInteg-1}\n");
+			Write($"{z} {linterp} {linterpInteg}\n");
 		}
 	}
 }

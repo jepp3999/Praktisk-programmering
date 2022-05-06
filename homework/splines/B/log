@@ -1,0 +1,28 @@
+\
+set terminal png
+\
+set output "qspline.png"
+\
+set xlabel "$x$"
+\
+set ylabel "$y$"
+\
+set tics out
+\
+set grid
+\
+set nokey 
+\
+plot "Out.txt" index 0 using 1:2 with points title"Tab. $x^2$/2",\ 
+\
+"Out.txt" index 0 using 1:3 with points pointtype 1 title "Tab. $x$",\ 
+\
+"Out.txt" index 1 using 1:2 with lines title "qIntPol: $x^2$/2",\ 
+\
+"Out.txt" index 1 using 1:3 with lines title "qDeriv: $x$",\ 
+\
+"Out.txt" index 0 using 1:4 with point pointtype 1 title "Tab. $x^3$/6",\ 
+\
+"Out.txt" index 1 using 1:4 with lines title "qInteg: $x^3$/6"\ 
+\
+
