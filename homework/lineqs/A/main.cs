@@ -7,8 +7,8 @@ using static QRGS;
 
 class main{
     public static void Main(){
-        int n = 5;
-        int m = 5;
+        int n = 9;
+        int m = 2;
         matrix A = new matrix(n,m);
         Random rnd = new Random();
         for(int i=0;i<n;i++){
@@ -34,7 +34,7 @@ class main{
         matrix Null=Q*R-A;
         Null.print();
 
-        vector b = new vector(n);
+        var b = new vector(n);
         for(int i=0;i<n;i++){
             b[i] = rnd.Next(15);
         } //for i

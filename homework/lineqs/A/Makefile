@@ -2,10 +2,10 @@ Out.txt: main.exe
 	mono $< > $@
 
 main.exe: main.cs matrix.dll QRGS.dll vector.dll
-	mcs $< -target:exe -reference:matrix.dll,QRGS.dll,vector.dll -out:$@
+	mcs $< -target:exe -reference:matrix.dll,QRGS.dll -out:$@
 
 QRGS.dll: QRGS.cs matrix.dll vector.dll
-	mcs $< -target:library -reference:matrix.dll,vector.dll -out:$@
+	mcs $< -target:library -reference:matrix.dll -out:$@
 
 MATHDIR = ~/repos/Praktisk-programmering/matlib
 matrix.dll: $(MATHDIR)/matrix.cs $(MATHDIR)/vector.cs

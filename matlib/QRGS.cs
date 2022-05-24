@@ -35,6 +35,16 @@ public class QRGS{
 		}
 	return x;
 	}
-	//public matrix inverse(){/* return the inverse matrix (part B) */}
+
+	public matrix inverse(){
+        matrix I = matrix.id(n);
+        matrix B = new matrix(n,m);
+        for(int i=0;i<n;i++){
+            B[i] = solve(I[i]);
+        }
+     return B;   
+    }
+
+
 	//public double determinant(){/* return ΠiRii */}
 }
