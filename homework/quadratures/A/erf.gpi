@@ -7,3 +7,4 @@ set key bottom right;\
 set grid;\
 plot\
 "Data.txt" index 0 using 1:2 with lines title "Errorfunction(z)"\
+,"erf.Data.txt" index 0 using 1:2 with points title "Table data"
