@@ -1,0 +1,12 @@
+\
+set terminal png ;\
+set output "ls.pyxplot.png" ;\
+set xlabel "$x$" ;\
+set ylabel "$log(y)$" ;\
+set title "Activity" ;\
+set ticks out ;\
+set key right;\
+plot "Out.txt" index 1 using 1:2:3 with errorbars title "Data",\ 
+\
+"Out.txt" index 3 using 1:2 with lines title "Fitted function"\
+
