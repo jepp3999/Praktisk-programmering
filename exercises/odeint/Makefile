@@ -3,7 +3,7 @@ Odeint.png: Out.txt Makefile
 	set terminal png ;\
 	set output "$@" ;\
 	set xlabel "$$t$$" ;\
-	set title "Error function";\
+	set title "Pendulum with friction";\
 	set ticks out;\
 	set key bottom right;\
 	set grid;\
