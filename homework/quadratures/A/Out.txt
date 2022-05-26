@@ -1,0 +1,5 @@
+Integrating functions from 0 to 1:
+f1(x) = sqrt(x), equal to 2/3. Result is 0.666953909054655 
+f2(x) = 1/sqrt(x), equal to 2. Result is 1.99996150007805 
+f3(x) = 4*sqrt(1-x^2), equal to pi. Result is 3.14183457802727 
+f4(x) = ln(x)/sqrt(x), equal to -4. Result is -3.99991705899915 

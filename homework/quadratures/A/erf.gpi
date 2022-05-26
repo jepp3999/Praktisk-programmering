@@ -1,0 +1,9 @@
+set terminal png ;\
+set output "erf.png" ;\
+set xlabel "$$z$$" ;\
+set title "Errorfunction, integral implementation";\
+set ticks out;\
+set key bottom right;\
+set grid;\
+plot\
+"Data.txt" index 0 using 1:2 with lines title "Errorfunction(z)"\
