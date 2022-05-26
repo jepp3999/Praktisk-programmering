@@ -27,14 +27,16 @@ public class ode{
     ){
         if(a>b) throw new Exception("driver: a>b");
         double x=a; vector y=ya;
-        do{
+        do {
             if(x>=b) return y; /* job done */
             if(x+h>b) h=b-x;   /* last step should end at b */
-            var (yh,erv) = rkstep12(F,x,y,h);
+
+            var (yh,erv) = rkstep12(f,x,y,h);
             double tol = Max(acc,yh.norm()*eps) * Sqrt(h/(b-a));
             double err = erv.norm();
-            if(err<=tol){ x+=h; y=yh; } // accept step
-        	h *= Min( Pow(tol/err,0.25)*0.95 , 2); // reajust stepsize
+            if(err<=tol){ x+=h; y=yh; Error.Write($"{x} {y[0]} {y[1]}\n");} // accept step
+        	h *= Min( Pow(tol/err,0.25)*0.95 , 2); // readjust stepsize
         }while(true);
     }//driver
 }
+    
