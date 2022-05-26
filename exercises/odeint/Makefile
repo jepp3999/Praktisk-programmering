@@ -7,7 +7,7 @@ Odeint.png: Out.txt Makefile
 	set ticks out;\
 	set key bottom right;\
 	set grid;\
-	plot [-0.2: 10.2] [-4.2: 3.6] "$<" index 0 using 1:2 with lines title "theta(t)",\ \n\
+	plot [-0.25: 10.25] [-4.2: 3.6] "$<" index 0 using 1:2 with lines title "theta(t)",\ \n\
 	"$<" using 1:3 with lines title "omega(t)"\
 	'| tee log.gpi | pyxplot
 
