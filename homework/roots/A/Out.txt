@@ -1,0 +1,6 @@
+Testing that routine works for f(x) = 2 + x + x*2^x
+Analytical results is app. -1.46935. The result from the routine is x=-1.46933757447759
+
+
+Using routine on Rosenbrock's valley function: f(x,y) = (1-x)^2+100(y-x^2)^2
+Analytical results is (1,1). The result from the routine is (x,y)=(0.993750006800642, 0.992578098289896)
