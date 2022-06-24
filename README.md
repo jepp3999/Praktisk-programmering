@@ -1,3 +1,7 @@
+# Exam project 22:
+
+### Author: Jeppe Surrow
+### Student ID: 201805168
 My student ID is 201805168, thus I have the exam project 22. 
 This project is the "Variational method with Lagrange multipliers".
 Here we look at a real symmetric matrix, whose eigenvector and eigenvalue we would like to find.
