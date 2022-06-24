@@ -30,9 +30,14 @@ public class main{ //Random symmetric matric
         WriteLine($"I then use a slightly modified root search routine to find the following eigenvector and eigenvalue");
         WriteLine($"eigenvalue = {eigval}");
         eigvec.print("eigenvector =");
-        WriteLine($"We need to check that the constraint actually worked, i.e. that the eigenvectors have unit length. So we take the dot-product");
+        WriteLine($"We need to check that the these eigenvectors solve the system.");
+        
+        vector check = A*eigvec-eigval*eigvec;
+        check.print("A*v-lambda*v=");
+        WriteLine($"which should be the zero vector. We see that it approximates it well.");
+        WriteLine($"We also need to check that the constraint actually worked, i.e. that the eigenvectors have unit length. So we take the dot-product");
         double dot = eigvec.dot(eigvec);
         WriteLine($"v^T v = {dot}");
-        WriteLine($"We see that the dot product is approximately equal to 1. So the constraint is forfilled");        
+        WriteLine($"We see that the dot product is approximately equal to 1. So the constraint is fullfilled");        
     }
 }
