@@ -50,4 +50,4 @@ class main{
         vector check = A*x-b;
         check.print();
     }
-}
+}}

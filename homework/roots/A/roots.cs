@@ -22,7 +22,7 @@ public class roots{
     
     public static vector newton(Func<vector,vector> f, vector x, double eps=1e-2){
 	    int n=x.size;
-	    vector fx=f(x),z,fz;
+	    vector fx=f(x),z,fz; //define f(x), z and fz as vectors
         vector dx = null;
         
 	    while(true){

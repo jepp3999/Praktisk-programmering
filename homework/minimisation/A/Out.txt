@@ -1,0 +1,7 @@
+Using routine on Rosenbrock's valley function: f(x,y) = (1-x)^2+100(y-x^2)^2
+Analytical result is (1,1). The result from the routine is (x,y)=(1.00003024224787, 1.00006108373149) found with N=20 steps
+
+
+Using routine on Himmelblau's function: f(x,y) = f(x,y)=(x^2+y-11)^2+(x+y^2-7)^2
+One of the analytical result is (3,2) (Others have a negative value of either x or y or both). 
+ The result from the routine is (x,y)=(3.00000006688048, 1.99999988006887) found with N=8 steps
