@@ -12,23 +12,23 @@ To use the variational method without constraints, we subtract the constraint ti
 
 This gives us a Lagrangian:
 
-L(v,&lambda) = v<sup>T</sup> A v - &lambda (v<sup>T</sup> v - 1)
+L(v,$\lambda$) = v<sup>T</sup> A v - $\lambda$ (v<sup>T</sup> v - 1)
 
 Here lambda is the multiplier, and when we have minimized this equaiton, lambda will be equal to the eigenvalue and v will be the eigenvector of unit length. 
-If we take the derivative of the Lagrangian w.r.t. the variables (v and &lambda) and set it equal to zero, we obtain the following equations to solve:
+If we take the derivative of the Lagrangian w.r.t. the variables (v and $\lambda$) and set it equal to zero, we obtain the following equations to solve:
 
 {Av-$\lambda$ v = 0, v<sup>T</sup>v-1=0}
 
 We can put these into a function f, which will have dimension n+1, if v has dimension n.
 The analytical Jacobian is then:
 
-df<sub>i</sub>(x)/dv<sub>j</sub> = A<sub>ij</sub>-&lambda delta<sub>ij</sub>
+df<sub>i</sub>(x)/dv<sub>j</sub> = A<sub>ij</sub>-$\lambda$ delta<sub>ij</sub>
 
-df<sub>i</sub>(x)/d &lambda= -v<sub>i</sub>
+df<sub>i</sub>(x)/d $\lambda$= -v<sub>i</sub>
 
 df<sub>n+1</sub>(x)/d v<sub>j</sub> = 2v<sub>j</sub>
 
-df<sub>n+i</sub>(x)/d &lambda= 0
+df<sub>n+i</sub>(x)/d $\lambda$= 0
 
 We can use this analytical Jacobian in our roots-finding routine from the homework, instead of the numerical one.
 
